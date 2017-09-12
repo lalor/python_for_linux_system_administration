@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 定义代码块，可以在子模块中重载 -->
+        {% block head %}
+            <link rel="stylesheet" href="style.css" />
+            <title>{% block title %}{% endblock %} - My Webpage</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="content">
+            <!-- 定义代码块，没有提供默认内容 -->
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="footer">
+            <!-- 定义代码块，没有提供默认内容 -->
+            {% block footer %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

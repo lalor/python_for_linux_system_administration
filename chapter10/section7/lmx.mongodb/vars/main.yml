@@ -1,0 +1,4 @@
+---
+# vars file for mongodb
+mongodb_datadir_prefix: /data
+mongod_port: 27018

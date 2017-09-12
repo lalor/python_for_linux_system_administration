@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 使用过滤器处理表达式的结果 -->
+        <title>{{ title | trim }}</title>
+    </head>
+    <body>
+        <!-- 注释 -->
+        {# This is a Comment #}
+        <ul id="navigation">
+            <!-- for语句，以endfor结束 -->
+            {% for item in items %}
+                <!-- 访问变量的属性 -->
+                <li><a href="{{ item.href }}">{{ item['caption'] }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>{{ content }}</p>
+    </body>
+</html>

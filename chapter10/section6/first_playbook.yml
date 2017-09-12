@@ -1,0 +1,15 @@
+---
+- hosts: dbservers
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: install mongodb
+    apt: name=mongodb-server state=present state=present
+
+- hosts: webservers
+  tasks:
+  - name: copy file
+    copy: src=/tmp/data.txt dest=/tmp/data.txt
+
+  - name: change mode
+    file: dest=/tmp/data.txt mode=655 owner=lmx group=lmx

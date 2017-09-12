@@ -1,0 +1,15 @@
+---
+# 一位职工记录
+name: Example Developer
+job: Developer
+skill: Elite
+employed: True
+foods:
+    - Apple
+    - Orange
+    - Strawberry
+    - Mango
+languages:
+    ruby: Elite
+    python: Elite
+    dotnet: Lame

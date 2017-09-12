@@ -1,0 +1,16 @@
+- name: install package
+  yum: name={{ item }} state=installed
+  with_items:
+     - httpd
+     - memcached
+  tags:
+     - packages
+
+- name: uploading config file
+  template: src=templates/src.j2 dest=/etc/foo.conf
+  tags:
+     - configuration
+
+- name: be sure ntpd is running and enabled
+  service: name=ntpd state=started enabled=yes
+  tags: ntp

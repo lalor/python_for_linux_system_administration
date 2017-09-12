@@ -1,0 +1,25 @@
+---
+- hosts: webservers
+  become: yes
+  become_method: sudo
+  vars:
+    worker_processes: 4
+    worker_connections: 768
+    max_open_files: 65506
+  tasks:
+    - name: install nginx
+      apt: name=nginx update_cache=yes state=present
+
+    - name: copy nginx config file
+      template: src=/home/lmx/test_ansible/nginx.conf.j2 dest=/etc/nginx/nginx.conf
+
+    - name: copy index.html
+      template:
+        src: /home/lmx/test_ansible/index.html.j2
+        dest: /usr/share/nginx/www/index.html
+        mode: 0644
+      notify: restart nginx
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted

@@ -1,0 +1,14 @@
+170221 01:07:48 Executing UNLOCK TABLES
+170221 01:07:48 All tables unlocked
+Starting slave SQL thread
+170221 01:07:48 [00] Streaming ib_buffer_pool to <STDOUT>
+170221 01:07:48 [00]        ...done
+170221 01:07:48 Backup created in directory '/home/lmx/log/backup'
+MySQL binlog position: filename 'mysql-bin.000003', position '507946128', GTID of the last change '5a81ea97-daf1-11e6-94c1-fa163ee35df3:1-3409440'
+MySQL slave binlog position: master host '10.173.33.35', filename 'mysql-bin.000002', position '524993060'
+170221 01:07:48 [00] Streaming backup-my.cnf
+170221 01:07:48 [00]        ...done
+170221 01:07:48 [00] Streaming xtrabackup_info
+170221 01:07:48 [00]        ...done
+xtrabackup: Transaction log of lsn (3387315364) to (3451223966) was copied.
+170221 01:07:48 completed OK!

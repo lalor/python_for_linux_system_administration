@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <table>
+            {% for item in items %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><a href = "{{ item['href'] }}">{{ item['title'] }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

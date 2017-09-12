@@ -1,0 +1,37 @@
+---
+# tasks file for mongodb
+tasks:
+  - name: Create the mongodb user
+    user: name=mongodb comment="MongoDB"
+
+  - name: Create the data directory for the namenode metadata
+    file: path={{ mongodb_datadir_prefix }} owner=mongodb group=mongodb state=directory
+
+  - name: Install the mongodb package
+    apt: name={{ item }} state=installed
+    with_items:
+      - mongodb-server
+      - mongodb-clients
+      - rsyslog-mongodb
+
+  - name: create data directory for mongodb
+    file:
+      path: "{{ mongodb_datadir_prefix }}/mongo-{{ ansible_hostname }}"
+      state: directory
+      owner: mongodb
+      group: mongodb
+
+  - name: create log directory for mongodb
+    file: path=/var/log/mongo state=directory owner=mongodb group=mongodb
+
+  - name: Create the mongodb startup file
+    template: src=mongod.j2 dest=/etc/init.d/mongod-{{ ansible_hostname }} mode=0655
+
+  - name: Create the mongodb configuration file
+    template: src=mongod.conf.j2 dest=/etc/mongod-{{ ansible_hostname }}.conf
+
+  - name: Copy the keyfile for authentication
+    copy: src=secret dest={{ mongodb_datadir_prefix }}/secret owner=mongodb group=mongodb mode=0400
+
+  - name: Start the mongodb service
+    command: creates=/var/lock/subsys/mongod-{{ ansible_hostname }} /etc/init.d/mongod-{{ ansible_hostname }} start

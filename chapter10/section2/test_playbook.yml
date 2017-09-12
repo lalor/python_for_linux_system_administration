@@ -1,0 +1,18 @@
+---
+- hosts: test
+
+  become: yes
+  become_method: sudo
+
+  tasks:
+  - name: copy file
+    copy: src=/tmp/data.txt dest=/tmp/data.txt
+
+  - name: change mode
+    file: dest=/tmp/data.txt mode=500 owner=root group=root
+
+  - name: ensure packages installed
+    apt: pkg={{ item }} state=present
+    with_items:
+      - tmux
+      - git

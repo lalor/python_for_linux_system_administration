@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<pass_service1>
+    <issa_server_a_host>{{ issa_server_a_host }}</issa_server_a_host>
+    <issa_server_a_port>{{ issa_server_a_port }}</issa_server_a_host>
+    <issa_server_c>{{ issa_server_c_host }}:{{ issa_server_c_port }}</issa_server_c>
+</pass_service1>

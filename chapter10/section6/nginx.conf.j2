@@ -1,0 +1,25 @@
+worker_processes  {{ worker_processes }};
+worker_rlimit_nofile {{ max_open_files }};
+
+events {
+    worker_connections {{ worker_connections }};
+}
+
+
+http {
+    server {
+            listen 80 default_server;
+            listen [::]:80 default_server ipv6only=on;
+
+            listen 443 ssl;
+
+            root /usr/share/nginx/www;
+            index index.html index.htm;
+
+            server_name localhost;
+
+            location / {
+                    try_files $uri $uri/ =404;
+            }
+    }
+}

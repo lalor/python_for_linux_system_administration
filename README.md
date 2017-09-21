@@ -3,6 +3,7 @@
 ## 书籍信息
 
 * 书名：Python Linux系统管理与自动化运维
+* 完整目录: <https://github.com/lalor/python_for_linux_system_administration/blob/master/table_of_contents.md>
 * 作者：赖明星
 * 作者邮箱：me@mingxinglai.com
 * 知乎：https://www.zhihu.com/people/mingxinglai

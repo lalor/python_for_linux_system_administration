@@ -49,23 +49,23 @@
 
 * 3.5.1 使用click解析命令行参数（59页）
 
-    "它的作用于Pytho标准库的argparse相同"，这句话里面的Python拼写错误。
+    "它的作用与Pytho标准库的argparse相同"，这句话里面的"Pytho"是单词拼写错误。
 
     **正确**:
 
-    它的作用于Python标准库的argparse相同
+    >它的作用与Python标准库的argparse相同
 
-* 4.2.4 案例：获取HTML页面中所有超链接
+* 4.2.4 案例：获取HTML页面中所有超链接（94页）
 
     在补充requests相关的说明时，多了两个星号。
 
     **错误**:
 
-    \*\*requests补充：\*\*requests是用来发送HTTP请求的库
+    >\*\*requests补充：\*\*requests是用来发送HTTP请求的库
 
     **正确**:
 
-    requests补充：requests是用来发送HTTP请求的库
+    >requests补充：requests是用来发送HTTP请求的库
 
 * 5.2 文件与文件路径管理（123页）
 
@@ -73,11 +73,11 @@
 
     **错误**:
 
-    而Windows下的路径分隔符是"/"
+    >而Windows下的路径分隔符是"/"
 
     **正确**:
 
-    而Windows下的路径分隔符是"\\"
+    >而Windows下的路径分隔符是"\\"
 
 * 8.5.6 案例：使用Scapy嗅探信用卡信息（252页）
 

@@ -49,7 +49,7 @@
 
 * 3.2 使用ConfigParser解析配置文件（49页）
 
-	在这一节中，由于Python 2的ConfigParser在Python 3中重命名为了configparser，并且使用上也有一些细微的差异，因此，需要在书中注明是Python 3还是Python 3。
+	在这一节中，由于Python 2的ConfigParser在Python 3中重命名为了configparser，并且使用上也有一些细微的差异，因此，需要在书中注明是Python 2还是Python 3。
 
 	**错误**:
 
@@ -59,7 +59,7 @@
 
 	>在Python语言中，标准库的ConfigParser模块用以解析配置文件（在Python 3中，ConfigParser模块重命名为了configparser模块，使用上有细微差异）。
 
-	此外，在50页的文字描述的倒数第二行，getinit错别字。
+	此外，在50页的文字描述的倒数第二行，getinit是错别字。
 
 	**错误**:
 
@@ -119,6 +119,31 @@
             america_re = re.findall('3[47][0-9]{13}', raw)
             master_re = re.findall('5[1-5][0-9]{14}', raw)
             visa_re = re.findall('4[0-9][0-9]{12}(?:[0-9]{3})?', raw)
+
+
+* 9.4.3 fab的命令行参数（267页）
+
+	冒号标错了位置。
+
+	**错误**：
+
+	>--Fabric:  提供的便捷操作可以实现不写一行代码进行远程操作。
+
+	**正确**：
+
+	>--：Fabric提供的便捷操作，可以实现不写一行代码进行远程操作。
+
+* 9.4.4 Fabric的env字典（269页）
+
+	冒号标错了位置。
+
+	**错误**：
+
+	>password SSH：到远程服务器的密码。
+
+	**正确**：
+	
+	>password：SSH到远程服务器的密码。
 
 * 11.3.1 Python中的多线程（382页）
 

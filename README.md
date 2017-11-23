@@ -139,11 +139,13 @@
 	**错误**：
 
     >env.user SSH：到远程服务器的用户名。
+
 	>password SSH：到远程服务器的密码。
 
 	**正确**：
 	
     >env.user：SSH到远程服务器的用户名。
+    
 	>password：SSH到远程服务器的密码。
 
 * 10.3.5 Inventory行为参数（302页）

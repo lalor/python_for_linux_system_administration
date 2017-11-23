@@ -47,6 +47,28 @@
         $ echo $?
         1
 
+* 3.2 使用ConfigParser解析配置文件（49页）
+
+	在这一节中，由于Python 2的ConfigParser在Python 3中重命名为了configparser，并且使用上也有一些细微的差异，因此，需要在书中注明是Python 3还是Python 3。
+
+	**错误**:
+
+	>在Python语言中，标准库的ConfigParser模块用以解析配置文件。
+
+	**正确**:
+
+	>在Python语言中，标准库的ConfigParser模块用以解析配置文件（在Python 3中，ConfigParser模块重命名为了configparser模块，使用上有细微差异）。
+
+	此外，在50页的文字描述的倒数第二行，getinit错别字。
+
+	**错误**:
+
+	>get、getboolean、getinit、getfloat：获取选项的值。
+
+	**正确**:
+
+	>get、getboolean、getint、getfloat：获取选项的值。
+
 * 3.5.1 使用click解析命令行参数（59页）
 
     "它的作用与Pytho标准库的argparse相同"，这句话里面的"Pytho"是单词拼写错误。

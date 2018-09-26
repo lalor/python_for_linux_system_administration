@@ -5,9 +5,9 @@ def conn_scan(host, port):
     conn = socket(AF_INET, SOCK_STREAM)
     try:
         conn.connect((host, port))
-        print(host, port, 'is avaliable')
+        print(host, port, 'is available')
     except Exception as e:
-        print(host, port, 'is not avaliable')
+        print(host, port, 'is not available')
     finally:
         conn.close()
 

@@ -4,7 +4,7 @@
   become_method: sudo
   tasks:
   - name: install mongodb
-    apt: name=mongodb-server state=present state=present
+    apt: name=mongodb-server state=present
 
 - hosts: webservers
   tasks:
